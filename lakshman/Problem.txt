@@ -1,0 +1,33 @@
+
+E-Magazine Project Description:
+
+An online magazine is a guide released on the Internet, through message board systems and other types of public computer systems.
+
+An online magazine stocks some functions with a blog and also with internet magazines, but can usually be recognized by its approach to article management. Publications normally have publishers or article forums who review distribution and perform a qc function to ensure that all material satisfies the objectives of the marketers (those investing time or money in its production) and the audience.
+
+Many large print-publishers now provide electronic duplication of their make magazine headings through various online services for a fee. These companies also make reference to their selections of these gifs products as online magazines, and sometimes as electronic magazines.
+
+Some online marketers have started posting in several electronic types, or double electronic types, that may include both HTML edition that look like conventional web webpages and Display editions that appear more like conventional magazines with electronic tossing of webpages.
+
+Online magazines comprising issues of interest to professionals in or cultures for educational topics, science, trade or industry are generally known as as online publications.
+
+Guests are permitted to accessibility only some functions of magazine. Compensated Customers need to sign up to the Journal to accessibility all of its material.
+
+The system is split into two segments:
+
+1. Customer Module: This component allows Customer to Register, View the Journal, visitor Post Feedback, Publish Articles and can give ads.
+
+2. Manager Module: In which the publishers can modify the Articles, Create new content And review.
+
+
+No UI coding is required.
+Write API methods in java classes.
+Push\Upload total workspace.
+Write adequate test cases. 
+Write standard code with proper documentation and clean code.
+
+Your github id XXXX is added to our repository as a collaborator.
+Write your code in eclipse or in any java enabled IDE and clone the below repository.
+URL : https://github.com/Narsimha6/DTCC_CodingScenarios.git
+After cloning the code there will be a folder with your name(Lakshman), Please paste your workspace there.
+After finishing code push to repository and reply back to this mail as completed.

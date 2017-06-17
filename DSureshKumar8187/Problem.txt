@@ -1,0 +1,21 @@
+This will be sample scenario I am going to share with L2 selected people.
+ 
+Problem :
+We have a shopping cart, write java classes to view, add, modify and delete items from the cart. 
+ View - On this function call user can see all added items
+Add - add new items to the existing cart
+Modify - Change the added items
+Delete - remove items from cart.
+Write API methods to for main cart.
+
+No UI coding is required.
+Write API methods in java classes.
+Push\Upload total workspace.
+Write adequate test cases. 
+Write standard code with proper documentation and clean code.
+ 
+Your github id sureshkumarD8187 is added to our repository as a collaborator.
+Write your code in eclipse or in any java enabled IDE and clone the below repository.
+URL : https://github.com/Narsimha6/DTCC_CodingScenarios.git
+After cloning the code there will be a folder with your name(DSureshKumar8187), Please paste your workspace there.
+Finishing the code push to repository and reply back to this mail as completed.
