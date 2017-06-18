@@ -1,0 +1,21 @@
+I have created a chat application with Java, Jersey, Jax RS, REST Assured(Unit Testing).
+
+I have created a maven archetype application using Eclipse IDE
+
+This application is like a simple twitter application, where a user can post a feed, and other user can comment to it.
+
+I have created these with error pages to handle the exceptions.
+
+Here, I have created CRUD for Message,User and Comments.
+
+So the application is like a message posting app. Where one can message and others can comment on those messages.
+
+I have created a DatabaseClass which is used a stub to store messages and users.
+
+This is full and full a Java REST application.
+
+So i have properly mentioned a end points for this application.
+
+I have also tested every rest API with the rest client called "POSTMAN".	
+
+Note: I have not created a client - server chat or any socket application using TCP/IP
