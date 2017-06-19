@@ -1,0 +1,14 @@
+com\dtcc\emagazine\service\UserServiceImpl.class
+com\dtcc\emagazine\model\Article.class
+com\dtcc\emagazine\controller\UserManagementController.class
+com\dtcc\emagazine\model\Advertisement.class
+com\dtcc\emagazine\util\CustomErrorType.class
+com\dtcc\emagazine\service\UserService.class
+com\dtcc\emagazine\service\CustomerService.class
+com\dtcc\emagazine\service\CustomerrServiceImpl.class
+com\dtcc\emagazine\controller\PublisherController.class
+com\dtcc\emagazine\service\PublisherServiceImpl.class
+com\dtcc\emagazine\EMagazineApp.class
+com\dtcc\emagazine\model\Customer.class
+com\dtcc\emagazine\controller\CustomerController.class
+com\dtcc\emagazine\service\PublisherService.class
