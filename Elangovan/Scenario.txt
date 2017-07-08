@@ -1,0 +1,16 @@
+Sample chat application API
+
+
+Write a simple chat application with below rules.
+
+No UI coding is required.
+Write API methods in java classes.
+Push\Upload total workspace.
+Write adequate test cases. 
+Write standard code with proper documentation and clean code.
+
+Your github id safi3989 is added to our repository as a collaborator.
+Write your code in eclipse or in any java enabled IDE and clone the below repository.
+URL : https://github.com/Narsimha6/DTCC_CodingScenarios.git
+After cloning the code there will be a folder with your name(Elangovan), Please paste your workspace there.
+After finishing code push to repository and reply back to this mail as completed.
