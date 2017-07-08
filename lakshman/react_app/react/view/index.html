@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
+    <title>Rwact with JSX</title>
+    <link rel="stylesheet" href="../shared/css/base.css" />
+  </head>
+  <body>
+    <h3>My First ReactJs</h3>
+    <div id="container">
+      <p>
+        To install React, follow the instructions on
+      </p>
+      <p>
+        If you can see this, React is not working right.
+      </p>
+    </div>  
+       
+    <script src="../shared/thirdparty/es5-shim.min.js"></script>
+    <script src="../shared/thirdparty/es5-sham.min.js"></script>
+    <script src="../shared/thirdparty/console-polyfill.js"></script>
+    <script src="../../build/react.js"></script>
+    <script src="../../build/JSXTransformer.js"></script>
+    <script type="text/jsx">
+      /**
+       * @jsx React.DOM
+       */
+     var ExampleApp = React.createClass({
+        render: function() {
+          var myName = this.props.name;
+		  var yourName = this.props.name2;
+          var message = 'Hello '+ myName+" and "+ yourName;
+          return <p>{message}, Welcome to ReactJS...</p>;
+        }
+      });
+      React.renderComponent(
+          <ExampleApp name="Lakshman" name2="Pardha" />,
+          document.getElementById('container')
+      );
+    </script>
+	<p>This is written with JSX and transformed in the browser.<p>
+	<p>&copy; 2017 DTCC<p>
+  </body>
+</html>
