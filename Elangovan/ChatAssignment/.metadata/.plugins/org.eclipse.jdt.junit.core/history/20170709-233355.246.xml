@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ClientTest.testCreateSocket" project="com.assignment.chat" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="testCreateSocket" classname="com.assignment.chat.server.test.ClientTest" incomplete="true"/>
+</testrun>

@@ -1,0 +1,15 @@
+package com.assignment.chat.server.test;
+
+import java.net.Socket;
+
+import org.junit.Test;
+
+public class ServerTest {
+	
+	  @Test public void testStart() {
+		  Socket socket = mock(Socket.class);
+		  
+	  }
+	
+
+}

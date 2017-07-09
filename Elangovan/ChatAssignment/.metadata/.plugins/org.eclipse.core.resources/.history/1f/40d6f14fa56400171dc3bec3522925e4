@@ -1,0 +1,10 @@
+package com.assignment.chat.server.test;
+
+import java.net.Socket;
+
+public class ServerTest {
+	
+	Socket socket = mock(Socket.class);
+	
+
+}

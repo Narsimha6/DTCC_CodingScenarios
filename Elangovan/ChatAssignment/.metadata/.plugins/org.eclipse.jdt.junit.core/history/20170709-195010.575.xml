@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ServerTest" project="com.assignment.chat" tests="1" started="0" failures="0" errors="1" ignored="0">
+  <testsuite name="com.assignment.chat.server.test.ServerTest" incomplete="true">
+    <error>org.mockito.exceptions.base.MockitoException: 
+Cannot instantiate @InjectMocks field named 'serverChat'.
+You haven't provided the instance at field declaration so I tried to construct the instance.
+However, I failed because: the type 'Server' has no default constructor
+Examples of correct usage of @InjectMocks:
+   @InjectMocks Service service = new Service();
+   @InjectMocks Service service;
+   //also, don't forget about MockitoAnnotations.initMocks();
+   //and... don't forget about some @Mocks for injection :)
+&#13;
+	at org.mockito.internal.runners.JUnit45AndHigherRunnerImpl$1.withBefores(JUnit45AndHigherRunnerImpl.java:27)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:276)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at org.mockito.internal.runners.JUnit45AndHigherRunnerImpl.run(JUnit45AndHigherRunnerImpl.java:37)&#13;
+	at org.mockito.runners.MockitoJUnitRunner.run(MockitoJUnitRunner.java:62)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+Caused by: org.mockito.exceptions.base.MockitoException: the type 'Server' has no default constructor&#13;
+	... 18 more&#13;
+Caused by: java.lang.NoSuchMethodException: com.assignment.chat.server.Server.&lt;init&gt;()&#13;
+	at java.lang.Class.getConstructor0(Unknown Source)&#13;
+	at java.lang.Class.getDeclaredConstructor(Unknown Source)&#13;
+	at org.mockito.internal.util.reflection.FieldInitializer$NoArgConstructorInstantiator.instantiate(FieldInitializer.java:177)&#13;
+	at org.mockito.internal.util.reflection.FieldInitializer.acquireFieldInstance(FieldInitializer.java:123)&#13;
+	at org.mockito.internal.util.reflection.FieldInitializer.initialize(FieldInitializer.java:85)&#13;
+	at org.mockito.internal.configuration.injection.PropertyAndSetterInjection.initializeInjectMocksField(PropertyAndSetterInjection.java:86)&#13;
+	at org.mockito.internal.configuration.injection.PropertyAndSetterInjection.processInjection(PropertyAndSetterInjection.java:70)&#13;
+	at org.mockito.internal.configuration.injection.MockInjectionStrategy.process(MockInjectionStrategy.java:68)&#13;
+	at org.mockito.internal.configuration.injection.MockInjectionStrategy.relayProcessToNextStrategy(MockInjectionStrategy.java:89)&#13;
+	at org.mockito.internal.configuration.injection.MockInjectionStrategy.process(MockInjectionStrategy.java:71)&#13;
+	at org.mockito.internal.configuration.injection.MockInjectionStrategy.relayProcessToNextStrategy(MockInjectionStrategy.java:89)&#13;
+	at org.mockito.internal.configuration.injection.MockInjectionStrategy.process(MockInjectionStrategy.java:71)&#13;
+	at org.mockito.internal.configuration.injection.MockInjection$OngoingMockInjection.apply(MockInjection.java:92)&#13;
+	at org.mockito.internal.configuration.DefaultInjectionEngine.injectMocksOnFields(DefaultInjectionEngine.java:20)&#13;
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.injectMocks(InjectingAnnotationEngine.java:100)&#13;
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.processInjectMocks(InjectingAnnotationEngine.java:62)&#13;
+	at org.mockito.internal.configuration.InjectingAnnotationEngine.process(InjectingAnnotationEngine.java:56)&#13;
+	at org.mockito.MockitoAnnotations.initMocks(MockitoAnnotations.java:108)&#13;
+	... 18 more&#13;
+&#13;
+</error>
+    <testcase name="testStart" classname="com.assignment.chat.server.test.ServerTest" incomplete="true"/>
+  </testsuite>
+</testrun>

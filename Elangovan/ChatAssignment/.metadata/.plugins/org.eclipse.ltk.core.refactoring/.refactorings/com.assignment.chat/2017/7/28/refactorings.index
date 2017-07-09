@@ -1,0 +1,20 @@
+1499589043435	Rename field 'sdf'
+1499589074661	Rename field 'al'
+1499589303533	Move compilation unit
+1499589315463	Delete elements
+1499589499866	Rename local variable 't'
+1499589722704	Rename field 'sInput'
+1499589743513	Rename field 'sOutput'
+1499589761775	Rename field 'cm'
+1499592031887	Rename local variable 'ct'
+1499603480199	Convert local variable 'scan' to field
+1499603892458	Rename field 'sInput'
+1499603906455	Rename field 'sOutput'
+1499603920370	Rename field 'scan'
+1499611366179	Extract method 'connectClient'
+1499611641136	Extract method 'disconnectClient'
+1499611799784	Rename method 'disconnectClient'
+1499611839677	Rename method 'connectClient'
+1499620507854	Extract method 'createSocket'
+1499622283318	Copy compilation unit
+1499622973679	Extract method 'setSocket'

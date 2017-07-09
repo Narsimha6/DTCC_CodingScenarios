@@ -1,0 +1,74 @@
+package com.assignment.chat.server.test;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.internal.runners.statements.Fail;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import com.assignment.chat.client.Client;
+import com.assignment.chat.server.Server;
+
+import static org.mockito.Mockito.*;
+
+@RunWith(MockitoJUnitRunner.class)
+public class ServerTest {
+	
+	@Mock
+	private ServerSocket mockServerSocket;
+	@Mock
+	private Client clientChat;
+	
+	@Mock
+	private Server serverChat;
+	
+	@Mock
+	private Socket mockTestClientSocket;
+
+	@Before
+	public void setup() {
+		
+	    mockServerSocket = mock(ServerSocket.class);
+	    mockTestClientSocket = mock(Socket.class);
+	    serverChat = new Server(1500);
+	    clientChat = new Client("localhost", 1500, "testing");
+	    
+	    try {
+	    	when(mockServerSocket.accept()).thenReturn(mockTestClientSocket);
+	    } catch (IOException e) {
+	    }
+
+	    /*try {
+	        PipedOutputStream oStream = new PipedOutputStream();
+	        when(mockTestClientSocket.getOutputStream()).thenReturn(oStream);
+
+	        PipedInputStream iStream = new PipedInputStream(oStream);
+	        when(mockTestClientSocket.getInputStream()).thenReturn(iStream);
+
+	        when(mockTestClientSocket.isClosed()).thenReturn(false);
+	    } catch (IOException e) {
+	        fail(e.getMessage());
+	    }*/
+	}
+	
+	  @Test public void testStart() {
+		  
+		  try {
+			  
+			mockTestClientSocket = mock(Socket.class);
+			when(mockServerSocket.accept()).thenReturn(mockTestClientSocket);
+			serverChat.start();
+			clientChat.start();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	  }
+	  
+}

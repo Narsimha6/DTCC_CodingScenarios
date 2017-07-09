@@ -1,0 +1,74 @@
+package com.assignment.chat.server.test;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.internal.runners.statements.Fail;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import com.assignment.chat.client.Client;
+import com.assignment.chat.server.Server;
+
+import static org.mockito.Mockito.*;
+
+@RunWith(JUnit4.class)
+public class ServerTest {
+	
+	@Mock
+	private ServerSocket mockServerSocket;
+	
+	@Mock
+	private Client clientChat;
+	
+	@Mock
+	private Server serverChat;
+	
+	@Mock
+	private Socket mockTestClientSocket;
+
+	@Before
+	public void init() {
+		MockitoAnnotations.initMocks(this);
+		mockTestClientSocket = mock(Socket.class);
+	    mockServerSocket = mock(ServerSocket.class);
+	    serverChat = new Server(1500);
+	    clientChat = new Client("localhost", 1500, "testing");
+	    
+	    try {
+	    	when(mockServerSocket.accept()).thenReturn(mockTestClientSocket);
+	    } catch (IOException e) {
+	    }
+	}
+	
+	  @Test public void testStart() {
+		  
+		  try {
+			  
+			mockTestClientSocket = mock(Socket.class);
+			when(mockServerSocket.accept()).thenReturn(mockTestClientSocket);
+			// Using Mockito
+	        final Socket socket = mock(Socket.class);
+	        final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+	        when(socket.getOutputStream()).thenReturn(byteArrayOutputStream);
+
+	        Message text = new Message(emptyPayload) {
+	            @Override
+	            protected Socket createSocket() {
+	                return socket;
+	            }
+	        };
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	  }
+	  
+}

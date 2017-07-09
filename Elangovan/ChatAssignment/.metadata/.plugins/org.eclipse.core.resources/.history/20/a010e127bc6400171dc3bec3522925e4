@@ -1,0 +1,38 @@
+package com.assignment.chat.server.test;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import com.assignment.chat.client.Client;
+import com.assignment.chat.server.Server;
+
+@RunWith(MockitoJUnitRunner.class)
+public class ServerTest {
+	
+	private Client clientChat;
+	
+	private Server serverChat;
+	
+	@Before
+	public void setup() {
+		
+	    serverChat = new Server(1500);
+	    serverChat.start();
+	    clientChat = new Client("localhost", 1500, "testing");
+	    
+	}
+	
+	  @Test 
+	  public void testStart() {
+		  
+		  try {
+			clientChat.start();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	  }
+	  
+}

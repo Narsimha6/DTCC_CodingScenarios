@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package com.assignment.chat.client;
+
+/**
+ * @author Elangovan
+ *
+ */
+public class Client {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+	}		
+}		

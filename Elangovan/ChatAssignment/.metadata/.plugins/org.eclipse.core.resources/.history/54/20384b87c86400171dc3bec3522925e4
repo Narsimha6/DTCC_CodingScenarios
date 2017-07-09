@@ -1,0 +1,46 @@
+package com.assignment.chat.server.test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.internal.runners.statements.Fail;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import com.assignment.chat.client.Client;
+import com.assignment.chat.server.Server;
+
+import static org.mockito.Mockito.*;
+
+@RunWith(JUnit4.class)
+public class ServerTest {
+	
+	@Mock
+	private Server serverChat;
+	
+	@Before
+	public void init() {
+	    serverChat = new Server(1500);
+	    serverChat.start();
+	}
+	
+	  @Test public void testStart() {
+		  
+		  try {
+			  
+	        
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	  }
+	  
+}
