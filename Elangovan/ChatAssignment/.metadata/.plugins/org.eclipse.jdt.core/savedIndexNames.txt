@@ -17,7 +17,6 @@ INDEX VERSION 1.130+D:\Assignment\DTCC_CodingScenarios\Elangovan\ChatAssignment\
 2470519452.index
 922380862.index
 2272273464.index
-2880393628.index
 4277419373.index
 2137571589.index
 4265864773.index
