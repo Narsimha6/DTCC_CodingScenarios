@@ -1,0 +1,75 @@
+package com.assignment.chat.server;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class ChatServer {
+	
+	private ServerSocket serverSocket;
+	private Socket connection; // connection-to-client
+	private OutputStream output;
+	private BufferedReader keyReader;
+	
+	 public void waitForConnection() {
+	        
+		 System.out.println("Server is ready to accept conenctions");
+	        try {
+	        	
+	        	serverSocket = new ServerSocket(3000);
+	            connection = serverSocket.accept(); // code will stop here until a
+	                                                // connection occurs
+	            System.out.println("Conenction established with the client");
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+
+	 public void getIOStreams() {
+	        
+		 try {
+			 
+			 keyReader = new BufferedReader(new InputStreamReader(System.in));
+                // sending to client (pwrite object)
+				OutputStream ostream = sock.getOutputStream(); 
+				PrintWriter pwrite = new PrintWriter(ostream, true);
+				
+				                    // receiving from server ( receiveRead  object)
+				InputStream istream = sock.getInputStream();
+				BufferedReader receiveRead = new BufferedReader(new InputStreamReader(istream));
+	            System.out.println("Server established I/O streams");
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	
+  public static void main(String[] args) throws Exception {
+	  ChatServer server = new ChatServer();
+	  server.waitForConnection();                        
+                              // reading from keyboard (keyRead object)
+      BufferedReader keyRead = new BufferedReader(new InputStreamReader(System.in));
+	                      // sending to client (pwrite object)
+      OutputStream ostream = sock.getOutputStream(); 
+      PrintWriter pwrite = new PrintWriter(ostream, true);
+
+                              // receiving from server ( receiveRead  object)
+      InputStream istream = sock.getInputStream();
+      BufferedReader receiveRead = new BufferedReader(new InputStreamReader(istream));
+
+      String receiveMessage, sendMessage;               
+      while(true)
+      {
+        if((receiveMessage = receiveRead.readLine()) != null)  
+        {
+           System.out.println(receiveMessage);         
+        }         
+        sendMessage = keyRead.readLine(); 
+        pwrite.println(sendMessage);             
+        pwrite.flush();
+      }               
+    }                    
+}                        

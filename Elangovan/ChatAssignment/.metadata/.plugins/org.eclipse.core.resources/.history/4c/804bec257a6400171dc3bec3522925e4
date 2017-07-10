@@ -1,0 +1,73 @@
+package com.assignment.chat.client;
+import java.io.*;
+import java.net.*;
+
+import com.assignment.chat.server.ChatServer;
+
+
+public class ChatClient {
+
+	private Socket connection;
+	private OutputStream output;
+	private InputStream input;
+	private BufferedReader keyReader;
+	private BufferedReader receiveReader;
+	private PrintWriter printWriter;
+	
+	public void establishConnection() {
+		try {
+			connection = new Socket("127.0.0.1", 3000);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	 public void getIOStreams() {
+	        
+		 try {
+			 
+			 keyReader = new BufferedReader(new InputStreamReader(System.in));
+             // sending to client
+			 output = connection.getOutputStream(); 
+			 printWriter = new PrintWriter(output, true);
+				
+			 // receiving from server ( receiveRead  object)
+			 input = connection.getInputStream();
+			 receiveReader = new BufferedReader(new InputStreamReader(input));
+	         System.out.println("Server established I/O streams");
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+	
+	 public void displayMessage() {
+			 
+			 String receiveMessage, sendMessage;      
+			 
+		      while(true) {
+		        try {
+					sendMessage = keyReader.readLine(); 
+			        printWriter.println(sendMessage);             
+			        printWriter.flush();
+			        
+			        if((receiveMessage = receiveReader.readLine()) != null) {
+						   System.out.println(receiveMessage);         
+						}
+			        
+				} catch (IOException e) {
+					e.printStackTrace();
+				}        
+		        
+		      }
+		 }
+		 
+	
+  public static void main(String[] args) throws Exception {
+	  
+	  ChatClient client = new ChatClient();
+	  
+	  client.establishConnection();
+	  client.getIOStreams();
+	  client.displayMessage();
+  }                        
+}                        

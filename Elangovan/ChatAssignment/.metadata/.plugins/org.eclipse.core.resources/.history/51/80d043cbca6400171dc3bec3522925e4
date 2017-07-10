@@ -1,0 +1,32 @@
+package com.assignment.chat.server.test;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+import org.mockito.Mock;
+
+import com.assignment.chat.server.Server;
+
+@RunWith(JUnit4.class)
+public class ServerTest {
+	
+	@Mock
+	private Server serverChat;
+	
+	@Before
+	public void init() {
+	    serverChat = new Server(1500);
+	}
+	
+	  @Test
+	  public void testCreateSocket() {
+		  
+		  try {
+			  serverChat.createSocket(1500);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	  }
+	  
+}
